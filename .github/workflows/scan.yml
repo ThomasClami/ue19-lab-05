@@ -25,12 +25,12 @@ jobs:
 
     
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/thomasclami/ue19-lab-05:$(date +%s)
+      run: docker build . --file Dockerfile --tag ghcr.io/thomasclami/ue19-lab-05:final
 
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@0.28.0
       with:
-          image-ref: 'ghcr.io/thomasclami/ue19-lab-05:$(date +%s)'
+          image-ref: ghcr.io/thomasclami/ue19-lab-05:final
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
