@@ -3,18 +3,19 @@ name: Docker Image CI + scan
 on:
   push:
     branches: [ "main" ]
+
   pull_request:
     branches: [ "main" ]
-  permissions:
-    contents: read
-    packages: write
+
 
 jobs:
 
   build:
 
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write
     steps:
     - name: checkout
       uses: actions/checkout@v4
