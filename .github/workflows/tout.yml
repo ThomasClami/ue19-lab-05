@@ -36,4 +36,4 @@ jobs:
 
     - name: Push image
       run: |
-       docker push ghcr.io//thomasclami/ue19-lab-05:final
+       docker push ghcr.io/thomasclami/ue19-lab-05:final
