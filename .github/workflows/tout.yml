@@ -30,11 +30,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ghcr.io/thomasclami/ue19-lab-05:final
 
-  build_and_push:
-    name: Build image & push
-    runs-on: ubuntu-latest
-
-
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
